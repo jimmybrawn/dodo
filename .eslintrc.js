@@ -33,7 +33,7 @@ module.exports = {
 		"no-trailing-spaces": 2,
 		"keyword-spacing": 2,
 		"space-before-function-paren": [
-			2,
+			0,
 			"never"
 		],
 		"spaced-comment": [2, "always"],
