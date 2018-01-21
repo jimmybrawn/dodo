@@ -30,7 +30,7 @@ module.exports = {
 				"allowSingleLine": true
 			}
 		],
-		"no-trailing-spaces": 2,
+		"no-trailing-spaces": 0,
 		"keyword-spacing": 2,
 		"space-before-function-paren": [
 			0,
@@ -53,7 +53,7 @@ module.exports = {
 		"no-unreachable": 1,
 		"no-unused-expressions": 1,
 		"no-magic-numbers": 1,
-		"max-len": [1, 80, 4],
+		"max-len": [1, 120, 4],
 		"react/prefer-es6-class": 1,
 	}
 

@@ -1,18 +1,37 @@
 import React, { Component } from 'react'
-import logo from '../assets/img/logo.svg'
 import './App.css'
-
+import ReceiptItem from './ReceiptItem';
+import Button from './Button';
+import AddReceipt from './AddReceipt';
 class App extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			items: [
+				{
+					name: 'Elgiganten Keyboard',
+					date: '2016-07-17'
+				},
+				{
+					name: 'Elgiganten Hoverboard',
+					date: '2018-01-21'
+				}
+			]
+		}
+	}
+
 	render() {
+
+		const itemList = this.state.items.map((item, i) => {
+			return (<ReceiptItem key={i} name={item.name} date={item.date} />)
+		})
+
 		return (
 			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<h1 className="App-title">Welcome to React</h1>
-				</header>
-				<p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-				</p>
+				{itemList}
+				<Button classes="green add-receipt"/>
+				<input type="file" accept="image/*" capture="camera" />
+				<AddReceipt/>
 			</div>
 		)
 	}
